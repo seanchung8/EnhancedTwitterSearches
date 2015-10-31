@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/queryEditText"
@@ -16,13 +16,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
         android:hint="@string/queryPrompt"
-        android:imeOptions="actionNext" >
-         
-        <requestFocus/>
+        android:imeOptions="actionNext">
+
+        <requestFocus />
     </EditText>
 
-    <LinearLayout
-        android:layout_gravity="fill_horizontal" >
+    <LinearLayout android:layout_gravity="fill_horizontal">
 
         <EditText
             android:id="@+id/tagEditText"
@@ -42,69 +41,80 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_height="0dp"
-        android:layout_gravity="fill"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:background="@android:color/holo_blue_bright"
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin" >
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill_horizontal"
-            android:gravity="center_horizontal"
+            android:layout_gravity="fill_horizontal|center"
+            android:gravity="center_vertical|center_horizontal"
             android:text="@string/taggedSearches"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_gravity="fill_horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_gravity="fill_horizontal">
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Live"
             android:id="@+id/liveCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:checked="true"
+            android:text="Live"
             android:textSize="@dimen/checkbox_text_size" />
 
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="News"
             android:id="@+id/newsCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:checked="true"
+            android:text="News"
             android:textSize="@dimen/checkbox_text_size" />
 
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Photos"
             android:id="@+id/photosCheckBox"
-            android:checked="true"
-            android:textSize="@dimen/checkbox_text_size" />
-        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Videos"
-            android:id="@+id/videosCheckBox"
             android:checked="true"
+            android:text="Photos"
+            android:textSize="@dimen/checkbox_text_size" />
+
+        <CheckBox
+            android:id="@+id/videosCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Videos"
             android:textSize="@dimen/checkbox_text_size" />
 
     </LinearLayout>
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="fill"
-            android:layout_marginBottom="@dimen/tagged_searches_padding"
-            android:layout_marginTop="@dimen/tagged_searches_padding"
-            android:layout_weight="1" />
+    <!--ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="fill"
+        android:layout_marginBottom="@dimen/tagged_searches_padding"
+        android:layout_marginTop="@dimen/tagged_searches_padding"
+        android:layout_weight="1" />
 
-    </LinearLayout>
-
+</LinearLayout-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@android:color/holo_blue_bright"
+        />
 </GridLayout>
